@@ -1,11 +1,10 @@
 import React from "react";
 import {Calendar} from "primereact/calendar";
 import {InputPanel} from "./InputPanel";
-import { toDatetime, toZonelessStr } from "../formatter";
+import {utcStrToDatetime} from "../formatter";
 
-export function DatetimeInput(
+export function LocalDatetimeInput(
     props: {
-        showTime:boolean,
         data: any,
         column: { field: string, header: string },
         register: any
@@ -15,22 +14,23 @@ export function DatetimeInput(
         inline:boolean
     }) {
     return <InputPanel  {...props} childComponent={(field: any) => {
-        const d = field.value && typeof(field.value) === "string" 
-            ? toDatetime(field.value) 
+        const d = field.value && typeof(field.value) === "string"
+            ?utcStrToDatetime(field.value)
             : field.value;
+       
         
         return <Calendar
             inline={props.inline}
             id={field.name}
-            showTime ={props.showTime}
+            showTime
             hourFormat="24"
             value={d}
             className={'w-full'}
             readOnlyInput={false}
             onChange={
                 e => {
-                    //remove zone info, let backend save date as it is
-                    field.onChange(toZonelessStr(e.value));
+                    //json.stringify will convert to utc iso format 2025-03-20T14:55:48.717Z
+                    field.onChange(e.value);
                 }
             }/>
     }}/>
