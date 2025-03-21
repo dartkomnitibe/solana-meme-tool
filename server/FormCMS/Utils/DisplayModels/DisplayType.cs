@@ -29,3 +29,11 @@ public enum DisplayType
     
     EditTable,
 }
+
+public static class DisplayTypeExtensions
+{
+    public static bool IsAsset(this DisplayType d)
+        => d is DisplayType.File or DisplayType.Image or DisplayType.Gallery;
+    public static bool IsCsv(this DisplayType displayType)
+        => displayType is DisplayType.Gallery or DisplayType.Multiselect;
+}
