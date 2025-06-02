@@ -1,11 +1,4 @@
-namespace FormCMS.Auth;
-
-public static class AuthMenus
-{
-    public const string MenuUsers = "menu_users";
-    public const string MenuRoles = "menu_roles";
-}
-
+namespace FormCMS.Auth.Models;
 
 public static class Roles
 {

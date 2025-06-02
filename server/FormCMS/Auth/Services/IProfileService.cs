@@ -1,15 +1,14 @@
-using FormCMS.Auth.Services;
-using FormCMS.Core.Identities;
+using FormCMS.Auth.Models;
 
-namespace FormCMS.Cms.Services;
+namespace FormCMS.Auth.Services;
 
 public interface IProfileService
 {
-    UserAccess? GetInfo();
-    Task ChangePassword(ProfileDto dto);
     AccessLevel MustGetReadWriteLevel(string entityName);
     AccessLevel MustGetReadLevel(string entityName);
+    Task ChangePassword(string password, string newPassword);
     void MustHasAnyRole(IEnumerable<string> role);
     Task EnsureCurrentUserHaveEntityAccess(string entityName);
     bool HasRole(string role);
+    Task UploadAvatar(IFormFile file, CancellationToken ct);
 }
