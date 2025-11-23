@@ -5,11 +5,11 @@ using FormCMS.Infrastructure.EventStreaming;
 
 namespace FormCMS.Engagements.Workers;
 
-public class ActivityEventHandler(
+public class EventHandler(
     IServiceScopeFactory scopeFactory,
     EngagementSettings settings,
     IStringMessageConsumer consumer,
-    ILogger<ActivityEventHandler> logger
+    ILogger<EventHandler> logger
 )
     : BackgroundService
 {
