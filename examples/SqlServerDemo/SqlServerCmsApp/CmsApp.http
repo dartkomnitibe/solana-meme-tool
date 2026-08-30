@@ -1,6 +1,0 @@
-@CmsApp_HostAddress = http://localhost:5170
-
-GET {{CmsApp_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
