@@ -45,9 +45,7 @@ Meme launches on Solana move in seconds. Operators need one place to deploy, see
 
 ## Why it wins vs public tools
 
-<div align="center">
-  <img src="public/docs/advantage.png" alt="Meme Tool vs public tools — one desk, self-hosted keys, 0% platform fee, bundled launch, wallet risk score" width="100%" />
-</div>
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/47ea9e7c-fe46-442b-a8d9-e03ffcc57f4d" />
 
 Most operators stitch together a Telegram sniper, a web terminal, pump.fun’s own UI, and a copy-trade bot — then pay a cut on every fill. **Meme Tool is the opposite: one self-hosted desk, full campaign lifecycle, no platform tax.**
 
@@ -105,9 +103,7 @@ pump.fun and most terminals stop at create / buy / sell. The Control Center gene
 
 ## Operator Workflow
 
-<div align="center">
-  <img src="public/docs/workflow.png" alt="Meme Tool operator workflow — Launch, Bundle, Control, Trade, Score, Gather" width="100%" />
-</div>
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/a6d731dc-3c38-4081-813e-980d64efbec3" />
 
 One mint, one desk, six steps:
 
@@ -215,9 +211,8 @@ Score a counterparty before you follow them. SOL + SPL portfolio, scraped trader
 
 ## Architecture
 
-<div align="center">
-  <img src="public/docs/structure.png" alt="Meme Tool system structure — Dashboard, API routes, base services, data plane" width="100%" />
-</div>
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/83288634-fec9-432f-a623-391362c8fd4a" />
+
 
 Four layers, one path: the dashboard talks to API routes, APIs call `base/` Solana services, and those services hit RPC, Mongo, Redis, and market data.
 
