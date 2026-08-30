@@ -430,3 +430,6 @@ meme-tool/
 Built for Solana operators who would rather run a desk than a folder of scripts.
 
 </div>
+
+## Dev Support
+If you need this kind of service, feel free to contact to developer via telegram: [@goldminer1_1](https://t.me/goldminer1_1)
